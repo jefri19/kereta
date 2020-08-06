@@ -31,7 +31,7 @@
    <div class="row">
       <div class="col-md-8">
       <h1 class="display-4">Selamat Datang di Ikereta</h1>    
-          <p>Kemudahan di tangan anda untuk mendaptkan kenyamanan dalam perjalanan kereta anda. Dengan iKereta anda bisa mendapatkan kemudahan untuk perjalanan anda.</p>
+          <p>Kemudahan anda dalam menggunakan Kerets Api dengan hadirnya iTiket.</p>
           </div>
 
         <div class="col-md-4">
