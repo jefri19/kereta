@@ -1,6 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+
+
+$route['admin/dashboard'] = 'admin/keHalamanDashboard';
+
+$route['logout'] = 'admin/logout';
+$route['prosesLogin'] = 'admin/login';
+$route['login'] = 'admin/keHalamanlogin';
+
 $route['konfirmasi'] = 'guest/keHalamanKonfirmasi';
 $route['default_controller'] = 'guest/keHalamanDepan';
 
