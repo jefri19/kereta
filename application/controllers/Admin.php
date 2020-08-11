@@ -12,10 +12,15 @@ class Admin extends CI_Controller {
             'nama'      => $this->input->post('username'),
             'password'  => $this->input->post('password'),
         ];
-        
-        $cek = $this->M_Admin->cekLogin($data);
 
+        $cek = $this->M_Admin->cekLogin($data);   
         if($cek > 0){
+            $sess = [
+                'status' => TRUE,
+                'level'  => 'admin',
+            ];
+            $this->session->set_userdata($sess);
+
            redirect(base_url('admin/dashboard'));
         }else {
             redirect(base_url('login'));
@@ -24,11 +29,20 @@ class Admin extends CI_Controller {
     
     public function logout()
     {
+        session_destroy();
         redirect(base_url());
     }
 
     public function keHalamanDashboard()
     {
-        $this->load->view('admin/dashboard');
+        if($this->session->status === TRUE){
+
+            $data['setasiun'] = $this->M_Admin->getDataSetasiun()->result();
+
+
+           $this->load->view('admin/dashboard', $data);
+        }else{
+            redirect(base_url('login'));
+        }
     }
 }

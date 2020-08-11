@@ -7,5 +7,10 @@ class M_Admin extends CI_Model {
     {
       return $this->db->get_where('admin', $data)->num_rows();
     }
+
+    public function getDataSetasiun()
+    {
+      return $this->db->get('setasiun');
+    }
     
 }
