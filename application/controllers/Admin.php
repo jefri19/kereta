@@ -45,4 +45,11 @@ class Admin extends CI_Controller {
             redirect(base_url('login'));
         }
     }
+
+    public function tambah_setasiun()
+    {
+           $nama = $this->input->POST('setasiun');
+           $input = $this->M_Admin->tambah_setasiun($nama);
+           redirect('admin/dashboard');
+    }
 }

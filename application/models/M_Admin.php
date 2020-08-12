@@ -13,4 +13,11 @@ class M_Admin extends CI_Model {
       return $this->db->get('setasiun');
     }
     
+    public function tambah_setasiun($nama)
+    {
+      $data = [
+        'nama_setasiun' => $nama,
+      ];
+      return $this->db->insert('setasiun', $data);
+    }
 }

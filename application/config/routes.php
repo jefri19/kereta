@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
+$route['tambahSetasiun'] = 'admin/tambah_setasiun';
 $route['admin/dashboard'] = 'admin/keHalamanDashboard';
 
 $route['logout'] = 'admin/logout';

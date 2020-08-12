@@ -20,21 +20,23 @@
         <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
       </li>
     </ul>
+    <span class="navbar-text">
+       <a href="<?= base_url('logout')?>">Loguot</a>
+    </span>
   </div>
 </nav>
-
 
 <div class="container-fluid my-4">
     <div class="row">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Daftar Setasiun</div>
+                <div class="card-header">Daftar Stasiun</div>
                 <div class="card-body">
                     <table class="table table-condnsed table-hover">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama Setasiun</th>
+                                <th>Nama Stasiun</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -62,7 +64,7 @@
 
               </div>
           </div>   
-          <form action="" method="POST">
+          <form action="<?= base_url('tambahSetasiun')?>" method="POST">
                 <div class="form-group">
                     <label>Nama Stasiun</label>
                     <input type="text"class="form-control"name="setasiun"placeholder="Nama Stasiun"><br>
@@ -72,8 +74,6 @@
         </div>
     </div>
 </div>
-
-<a href="<?= base_url('logout')?>">Loguot</a>
 
 <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
 </body>
