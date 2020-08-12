@@ -52,4 +52,10 @@ class Admin extends CI_Controller {
            $input = $this->M_Admin->tambah_setasiun($nama);
            redirect('admin/dashboard');
     }
+
+    public function hapus_setasiun($id)
+    {
+           $delete = $this->M_Admin->delete_stasiun($id);
+           redirect (base_url('admin/dashboard'));
+    }
 }

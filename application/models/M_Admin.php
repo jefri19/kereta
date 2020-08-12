@@ -20,4 +20,10 @@ class M_Admin extends CI_Model {
       ];
       return $this->db->insert('setasiun', $data);
     }
+
+    public function delete_stasiun($id)
+    {
+      $this->db->where('id', $id);
+      return $this->db->delete('setasiun');
+    }
 }

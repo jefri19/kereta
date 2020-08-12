@@ -47,8 +47,9 @@
                                 <th><?= $no++ ?></th>
                                 <th><?= $stn->nama_setasiun ?></th>
                                 <th>
-                                    <a href="" class="btn btn-danger">Hapus</a>
-                                    <a href=""class="btn btn-primary">Edit</a>
+                                  <a href="<?= base_url('hapusStasiun/'.$stn->id) ?>" class="btn btn-danger">Hapus</a>
+
+                                  <a href=""class="btn btn-primary">Edit</a>
                                 </th>
                             </tr>
                             <?php endforeach ?>
