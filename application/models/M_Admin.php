@@ -26,4 +26,21 @@ class M_Admin extends CI_Model {
       $this->db->where('id', $id);
       return $this->db->delete('setasiun');
     }
+
+    public function getDataEditStasiun($id)
+    {
+      $data = [
+        'id' => $id,
+      ];
+      return $this->db->get_where('setasiun', $data);
+    }
+
+    public function edit_stasiun($nama)
+    {
+      $data = [
+        'nama_setasiun' => $nama,
+      ];
+      $this->db->where('id', $this->input->post('id'));
+      return $this->db->update('setasiun', $data);
+    }
 }

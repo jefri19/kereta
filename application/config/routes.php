@@ -4,6 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
+$route['editStasiun'] = 'admin/edit_stasiun';
+$route['admin/dashboard/edit/(:any)'] = 'admin/keHalamanEditStasiun/$1';
+
 $route['hapusStasiun/(:any)'] = 'admin/hapus_setasiun/$1';
 $route['tambahSetasiun'] = 'admin/tambah_setasiun';
 $route['admin/dashboard'] = 'admin/keHalamanDashboard';

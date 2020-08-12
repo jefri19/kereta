@@ -48,14 +48,27 @@ class Admin extends CI_Controller {
 
     public function tambah_setasiun()
     {
-           $nama = $this->input->POST('setasiun');
-           $input = $this->M_Admin->tambah_setasiun($nama);
-           redirect('admin/dashboard');
+        $nama = $this->input->POST('setasiun');
+        $input = $this->M_Admin->tambah_setasiun($nama);
+        redirect('admin/dashboard');
     }
 
     public function hapus_setasiun($id)
     {
-           $delete = $this->M_Admin->delete_stasiun($id);
-           redirect (base_url('admin/dashboard'));
+        $delete = $this->M_Admin->delete_stasiun($id);
+        redirect (base_url('admin/dashboard'));
+    }
+
+    public function keHalamanEditStasiun($id)
+    {
+        $data['data_stasiun'] = $this->M_Admin->getDataEditStasiun($id)->row();
+        $this->load->view('admin/edit_stasiun', $data);
+    }
+
+    public function edit_stasiun()
+    {
+       $nama = $this->input->post('nama_stasiun');
+       $edit = $this->M_Admin->edit_stasiun($nama);
+       redirect (base_url('admin/dashboard'));
     }
 }
