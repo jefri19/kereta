@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Agu 2020 pada 14.55
+-- Waktu pembuatan: 22 Agu 2020 pada 04.16
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.27
 
@@ -25,30 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Struktur dari tabel `setasiun`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `setasiun` (
   `id` int(11) NOT NULL,
-  `nama` varchar(225) NOT NULL,
-  `password` varchar(225) NOT NULL
+  `nama_setasiun` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data untuk tabel `setasiun`
 --
 
-INSERT INTO `admin` (`id`, `nama`, `password`) VALUES
-(1, 'admin', '12345');
+INSERT INTO `setasiun` (`id`, `nama_setasiun`) VALUES
+(7, 'MALANG '),
+(8, 'SURABAYA KOTA'),
+(9, 'BANDUNG KOTA'),
+(11, 'JAKARTA'),
+(12, 'JOMBANG KOTA');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indeks untuk tabel `setasiun`
 --
-ALTER TABLE `admin`
+ALTER TABLE `setasiun`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,10 +59,10 @@ ALTER TABLE `admin`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT untuk tabel `setasiun`
 --
-ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `setasiun`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

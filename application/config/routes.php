@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-
+$route['cariTiket'] = 'guest/cari_tiket';
 
 $route['editStasiun'] = 'admin/edit_stasiun';
 $route['admin/dashboard/edit/(:any)'] = 'admin/keHalamanEditStasiun/$1';

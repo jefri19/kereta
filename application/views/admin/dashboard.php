@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Daftar Stasiun</div>
+                <div class="card-header text-center bg-primary text-white"><strong>Daftar Stasiun</strong></div>
                 <div class="card-body">
                     <table class="table table-condnsed table-hover">
                         <thead>
@@ -60,7 +60,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-              <div class="card-header">Form Tambah Stasiun</div>
+              <div class="card-header text-center bg-success text-white"><strong>Form Tambah Stasiun</strong></div>
               <div class="body">
 
               </div>
