@@ -10,6 +10,8 @@ class M_Guest extends CI_Model {
     public function cari_tiket($data)
     {
         $this->db->select('jadwal.*, Asal.nama_setasiun AS ASAL, Tujuan.nama_setasiun AS TUJUAN');
+        $this->db->where($data);
+        $this->db->like('tgl_berangkat', $this->input->post('tanggal'));
         $this->db->from('jadwal');
         $this->db->join('setasiun as Asal','jadwal.asal = Asal.id', 'left');
         $this->db->join('setasiun as Tujuan','jadwal.tujuan = Tujuan.id', 'left');

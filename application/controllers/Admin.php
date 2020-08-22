@@ -62,6 +62,7 @@ class Admin extends CI_Controller {
     public function keHalamanEditStasiun($id)
     {
         $data['data_stasiun'] = $this->M_Admin->getDataEditStasiun($id)->row();
+
         $this->load->view('admin/edit_stasiun', $data);
     }
 
@@ -71,4 +72,29 @@ class Admin extends CI_Controller {
        $edit = $this->M_Admin->edit_stasiun($nama);
        redirect (base_url('admin/dashboard'));
     }
+
+    public function keHalamanKelolaJadwal()
+    {
+        $data['setasiun'] = $this->M_Admin->getDatasetasiun()->result();
+
+        $data['jadwal'] = $this->M_Admin->getjadwal()->result();
+
+        $this->load->view('admin/kelola_jadwal', $data);
+    }
+
+    public function tambah_jadwal()
+    {
+        $data = [
+            'nama_kereta' => $this->input->post('nama_kereta'),
+            'asal'        => $this->input->post('asal'),
+            'tujuan'      => $this->input->post('tujuan'),
+            'tgl_berangkat' => $this->input->post('tgl_berangkat'),
+            'tgl_sampai'  => $this->input->post('tgl_sampai'),
+            'kelas' => $this->input->post('kelas'),
+        ];
+
+        $this->M_Admin->tambah_jadwal($data);
+
+        redirect (base_url('admin/dashboard/kelola-jadwal'));
+     }
 }

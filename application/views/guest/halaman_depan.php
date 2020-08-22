@@ -4,7 +4,7 @@
    <div class="row">
       <div class="col-md-8">
         <br> <br> <br> 
-      <h1 class="display-4">Selamat Datang di Ikereta</h1>    
+      <h1 class="display-4">Selamat Datang di iKereta</h1>    
           <p>Kemudahan anda dalam menggunakan Kerets Api dengan hadirnya iKereta</p>
           </div>
 
@@ -58,6 +58,9 @@
 
   <div class="container">
   <hr>
+  <?php if(!isset($tiket)): ?>
+  <?php else: ?>
+
   <div class="table table-responsive">
     <table class="table table-hover table-bordered">
       <thead class="bg-warning text-center">
@@ -85,4 +88,5 @@
       </tbody>
     </table>
   </div>
+        <?php endif; ?>
 </div>

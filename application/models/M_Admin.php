@@ -43,4 +43,18 @@ class M_Admin extends CI_Model {
       $this->db->where('id', $this->input->post('id'));
       return $this->db->update('setasiun', $data);
     }
+    
+    public function tambah_jadwal($data)
+    {
+      return $this->db->insert('jadwal', $data); 
+    }
+
+    public function getJadwal()
+    {
+      $this->db->select('jadwal.*, Asal.nama_setasiun AS ASAL, Tujuan.nama_setasiun AS TUJUAN');
+      $this->db->from('jadwal');
+      $this->db->join('setasiun as Asal','jadwal.asal = Asal.id', 'left');
+      $this->db->join('setasiun as Tujuan','jadwal.tujuan = Tujuan.id', 'left');
+      return $this->db->get();
+    }
 }

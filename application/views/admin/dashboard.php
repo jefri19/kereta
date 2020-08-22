@@ -19,6 +19,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="<?php echo base_url('admin/dashboard/kelola-jadwal') ?>">Kelola Jdwal </a>
+      </li>
     </ul>
     <span class="navbar-text">
        <a href="<?= base_url('logout')?>">Loguot</a>

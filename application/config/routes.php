@@ -2,6 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
+$route['tambahJadwal'] = 'admin/tambah_jadwal';
+$route['admin/dashboard/kelola-jadwal'] = 'admin/keHalamanKelolaJadwal';
+
 $route['cariTiket'] = 'guest/cari_tiket';
 
 $route['editStasiun'] = 'admin/edit_stasiun';
